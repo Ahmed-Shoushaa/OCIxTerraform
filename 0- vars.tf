@@ -17,8 +17,8 @@ variable "image_operating_system_version" {
 }
 
 data "oci_core_image" "compute_images" {
-    image_id = oci_identity_compartment.wind_task_compartment.id
-    operating_system = var.image_operating_system
-    operating_system_version = var.image_operating_system_version
+  image_id                 = oci_identity_compartment.wind_task_compartment.id
+  operating_system         = var.image_operating_system
+  operating_system_version = var.image_operating_system_version
 }
 

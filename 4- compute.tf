@@ -10,7 +10,7 @@ resource "oci_core_instance" "Wind_IS" {
     display_name = "Wind_IS"
     shape = "VM.Standard2.1"
     source_details {
-        source_id = "<source-ocid>"
+        source_id = "ocid1.image.oc1.iad.aaaaaaaaevjttsicdlm4h3zomclg6pztgxgg7ba54e27c4oopvkbaftvjqna" 
         source_type = "image"
     }
 

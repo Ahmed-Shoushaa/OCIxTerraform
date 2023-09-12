@@ -1,3 +1,4 @@
+# Keep uncommented only if you use automation.sh script
 terraform {
   required_providers {
     oci = {

@@ -1,15 +1,17 @@
 # OCI-Terraform
 Simple infrastructure on OCI using Terraform
 <p align="center">
-  <img width="460" height="300" src="![https://user-images.githubusercontent.com/117172376/227237318-2a672164-8e79-4c08-aebf-581954ae53d3.png">
-</p>](Images/oci-architecture.png)
+  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/blob/main/Images/oci-architecture.png">
+</p>
+
 ## Prerequisites:
 
 1. **Terraform installed**
     
     ```bash
-    # In the script directory
+    # cd to the script directory
     chmod 700 terraform_install.sh
+    # For Debian/Ubuntu based images only
     ./terraform_install.sh
     ```
     
@@ -17,10 +19,7 @@ Simple infrastructure on OCI using Terraform
     
 2. **RSA Keys for authentication and add it’s public key to your user account**
     
-    ```
-    Note:
-    If you're using Oracle Cloud Shell, skip creating the RSA keys. You're already authenticated when you log in to the OCI Console.
-    ```
+    `Note: If you're using Oracle Cloud Shell, skip creating the RSA keys. You're already authenticated when you log in to the OCI Console.`
     
     ```bash
     # Run key-gen.sh script which generates RSA keys in ~/.oci
@@ -36,9 +35,11 @@ Simple infrastructure on OCI using Terraform
     - Select **Paste Public Keys**.
     - Paste value from previous step, including the lines with `BEGIN PUBLIC KEY` and `END PUBLIC KEY`.
     - Click **Add**.
-3. **Add List Policy**
+4. **Add List Policy**
     
-    If your username is in the **Administrators** group, then skip this section. Otherwise, ask your administrator to add the following policy to your tenancy:
+    `If your username is in the Administrators group, then skip this section.`
+   
+   Otherwise, ask your administrator to add the following policy to your tenancy:
     
     1. In the top navigation bar, open the **Profile** menu.
     2. Click your username.
@@ -59,7 +60,7 @@ Simple infrastructure on OCI using Terraform
         ```
         
     11. Click **Create**.
-4. Prepare required data for authentication:
+6. Prepare required data for authentication:
     1. Collect the following credential information from the **OCI Console**.
         - **Tenancy OCID:**
             - In the top navigation bar, click the **Profile** menu, go to **Tenancy:** *<your-tenancy>*  and copy OCID.
@@ -81,5 +82,22 @@ Simple infrastructure on OCI using Terraform
 For More details: https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-summary.htm
 
 ## Run Terraform Scripts:
+We can run the terraform scripts with multiple methods choose one of them:
+1. Run automation.sh which takes the required authentication data as Environmental variables and authenticate to oracle api with it then create or delete the infrastructure
+    ```bash
+    # cd to the script directory
+    chmod 700 automation.sh
+    ./automation.sh
+    ```
+<p align="center">
+  <img width="600" height="450" src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/d75c34a0-11d7-42b4-8cd8-d65aa440e011">
+</p>
 
-1. Run [automation.sh](http://automation.sh) which takes the required authentication data as Environmental variables
+2. Uncomment the <provider "oci"> section in provider.tf and add the required data values
+<p align="center">
+  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/a344c5ea-7d02-4a23-b28a-a5935b8a230d">
+</p>
+
+## Access Instance 
+The Output of Terraform is the instance public Ip 
+

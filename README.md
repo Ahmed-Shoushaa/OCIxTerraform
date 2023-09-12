@@ -30,36 +30,17 @@ Simple infrastructure on OCI using Terraform
     Then Add the public key to your user account.
     
     - In the OCI Console's top navigation bar, click the **Profile** menu, and then go to **User settings**.
-    - Click **API Keys**.
-    - Click **Add API Key**.
-    - Select **Paste Public Keys**.
-    - Paste value from previous step, including the lines with `BEGIN PUBLIC KEY` and `END PUBLIC KEY`.
-    - Click **Add**.
+    - Click **API Keys** -> **Add API Key** -> **Paste Public Keys**
+    - Paste value from previous step, including the lines with `BEGIN PUBLIC KEY` and `END PUBLIC KEY` then **Add**
 4. **Add List Policy**
     
-    `If your username is in the Administrators group, then skip this section.`
+    If your username is in the Administrators group, then skip this step.
    
-   Otherwise, ask your administrator to add the following policy to your tenancy:
+   Otherwise, ask your administrator to add the following policy to your tenancy
+   
+   For details to add policy: https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-summary.htm
+   
     
-    1. In the top navigation bar, open the **Profile** menu.
-    2. Click your username.
-    3. In the left pane, click **Groups**.
-    4. In a notepad, copy the **Group Name** that your username belongs.
-    5. Open the navigation menu and click **Identity & Security**. Under **Identity**, click **Policies**.
-    6. Select `<your-tenancy>(root)` from the **Compartment** dropdown.
-    7. Click **Create Policy**.
-    8. Fill in the following information:
-        - **Name:** `list-resources`
-        - **Description:** `Allow the group <the-group-your-username-belongs> to list the resources in this tenancy.`
-        - **Compartment:** `<your-tenancy>(root)`
-    9. For **Policy Builder**, click **Show manual editor**.
-    10. Paste in the following policy:
-        
-        ```
-        allow group <the-group-your-username-belongs> to read all-resources in tenancy
-        ```
-        
-    11. Click **Create**.
 6. Prepare required data for authentication:
     1. Collect the following credential information from the **OCI Console**.
         - **Tenancy OCID:**
@@ -74,14 +55,18 @@ Simple infrastructure on OCI using Terraform
             - From the table in [Regions and Availability Domains](https://docs.oracle.com/iaas/Content/General/Concepts/regions.htm), Find your region's `<region-identifier>`. Example: `us-ashburn-1`.
     2. Collect the following information from **your environment**.
         - **Private Key Path:**
-            - Path to the **RSA private key** you made in the **Create RSA Keys** section.
-                
-                Example for Oracle Linux: `~/.oci/RSA.pem`
+            - Path to the **RSA private key** you made in the **Create RSA Keys** section `~/.oci/RSA.pem`.
                 
 
 For More details: https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-summary.htm
 
 ## Run Terraform Scripts:
+first pull this git repo to access the scripts
+```bash
+git pull https://github.com/Ahmed-Shoushaa/OCIxTerraform.git
+```
+
+
 We can run the terraform scripts with multiple methods choose one of them:
 1. Run automation.sh which takes the required authentication data as Environmental variables and authenticate to oracle api with it then create or delete the infrastructure
     ```bash

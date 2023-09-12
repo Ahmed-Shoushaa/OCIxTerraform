@@ -61,11 +61,6 @@ Simple infrastructure on OCI using Terraform
 For More details: https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-summary.htm
 
 ## Run Terraform Scripts:
-first pull this git repo to access the scripts
-```bash
-git pull https://github.com/Ahmed-Shoushaa/OCIxTerraform.git
-```
-
 
 We can run the terraform scripts with multiple methods choose one of them:
 1. Run automation.sh which takes the required authentication data as Environmental variables and authenticate to oracle api with it then create or delete the infrastructure

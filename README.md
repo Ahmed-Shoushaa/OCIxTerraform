@@ -1,7 +1,7 @@
 # OCI-Terraform
 Simple infrastructure on OCI using Terraform
 <p align="center">
-  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/blob/main/Images/oci-architecture.png">
+  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/blob/e51e46cca32c9d44660305d29ecb6c555569a255/Images/oci-architecture.jpg">
 </p>
 
 ## Prerequisites:

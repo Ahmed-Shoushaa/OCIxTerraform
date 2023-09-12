@@ -9,3 +9,10 @@ data "oci_identity_availability_domains" "ads" {
   compartment_id = var.tenancy_ocid
 }
 
+variable "image-operating_system" {
+  default = "Ubuntu"
+}
+
+variable "image_opperating_system_version" {
+  default = "22.04"
+}

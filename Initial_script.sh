@@ -1,10 +1,10 @@
 #!/bin/bash
-sudo yum install -y httpd
-sudo systemctl enable httpd
-sudo systemctl restart httpd
+sudo apt update
+sudo apt install apache2
 echo "Hello Wind-Is It's Ahmed 🫡" > /var/www/html/index.html
-# sudo firewall-cmd --add-service=http --permanent
-# Enable HTTPS connections on port 443 
-# sudo firewall-cmd --add-service=https --permanent
-# reload firewall
-# sudo firewall-cmd --reload
+
+# For red hat based 
+# sudo yum install -y httpd
+# sudo systemctl enable httpd
+# sudo systemctl restart httpd
+# echo "Hello Wind-Is It's Ahmed 🫡" > /var/www/html/index.html

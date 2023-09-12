@@ -93,6 +93,7 @@ The instance have apache server installed it should output this
   <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/f02bb374-ef5b-4406-8104-11ab01932494">
 </p>
 
+Unfortunately I didn't have the chance to test most of the Terraform scripts due to the oracle cloud subscription
 
 
 

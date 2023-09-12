@@ -1,3 +1,8 @@
+data "template_file" "user_data" {
+    template = file("initial_script.sh")
+
+}
+
 resource "oci_core_instance" "Wind_IS" {
     # Required
     availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
@@ -15,7 +20,7 @@ resource "oci_core_instance" "Wind_IS" {
         subnet_id = oci_core_subnet.vcn-public-subnet.id
     }
     metadata = {
-        user_data = file("initial_script.sh")
+        user_data = base64encode(data.template_file.user_data.rendered)
     } 
     preserve_boot_volume = false
 }

@@ -34,11 +34,11 @@ case $desicion in
                 read -p "Enter your Fingerprint: " fingerprint
                 read -p "Enter your Region: " region
                 read -p "Enter Private Key Path: " private_key_path
-                export $tenancy_ocid
-                export $user_ocid
-                export $fingerprint
-                export $region
-                export $private_key_path
+                export TF_VAR_tenancy_ocid=$tenancy_ocid
+                export TF_VAR_user_ocid=$user_ocid
+                export TF_VAR_fingerprint=$fingerprint
+                export TF_VAR_region=$region
+                export TF_VAR_private_key_path$private_key_path
                 terraform init
                 terraform apply 
                 ;;
@@ -50,11 +50,11 @@ case $desicion in
                 read -p "Enter your Fingerprint: " fingerprint
                 read -p "Enter your Region: " region
                 read -p "Enter Private Key Path: " private_key_path
-                export $tenancy_ocid
-                export $user_ocid
-                export $fingerprint
-                export $region
-                export $private_key_path
+                export TF_VAR_tenancy_ocid=$tenancy_ocid
+                export TF_VAR_user_ocid=$user_ocid
+                export TF_VAR_fingerprint=$fingerprint
+                export TF_VAR_region=$region
+                export TF_VAR_private_key_path$private_key_path
                 terraform destroy 
                 ;;
         *)

@@ -78,6 +78,13 @@ We can run the terraform scripts with multiple methods choose one of them:
   <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/71dd5178-4cc3-4cfe-ab80-774955333bd9">
 </p>
 
+  ```bash
+  terraform init
+  terraform apply
+  terraform destroy # To delete Infrastructure
+  ```
+
+
 ## Access Instance 
 The Output of Terraform is the instance public Ip 
 

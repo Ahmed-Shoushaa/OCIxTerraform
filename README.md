@@ -88,3 +88,11 @@ We can run the terraform scripts with multiple methods choose one of them:
 ## Access Instance 
 The Output of Terraform is the instance public Ip 
 
+The instance have apache server installed it should output this 
+<p align="center">
+  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/f02bb374-ef5b-4406-8104-11ab01932494">
+</p>
+
+
+
+

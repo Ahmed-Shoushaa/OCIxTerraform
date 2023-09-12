@@ -32,13 +32,13 @@ case $desicion in
                 read -p "Enter your Tenancy OCID: " tenancy_ocid
                 read -p "Enter your User OCID: " user_ocid
                 read -p "Enter your Fingerprint: " fingerprint
-                read -p "Enter your Region: " region_identifier
-                read -p "Enter Private Key Path: " rsa_private_key_path
-                export tenancy-ocid=$tenancy_ocid
-                export user-ocid=$user_ocid
-                export fingerprint=$fingerprint
-                export region-identifier=$region_identifier
-                export rsa-private-key-path=$rsa_private_key_path
+                read -p "Enter your Region: " region
+                read -p "Enter Private Key Path: " private_key_path
+                export $tenancy_ocid
+                export $user_ocid
+                export $fingerprint
+                export $region
+                export $private_key_path
                 terraform init
                 terraform apply 
                 ;;
@@ -48,13 +48,13 @@ case $desicion in
                 read -p "Enter your Tenancy OCID: " tenancy_ocid
                 read -p "Enter your User OCID: " user_ocid
                 read -p "Enter your Fingerprint: " fingerprint
-                read -p "Enter your Region: " region_identifier
-                read -p "Enter Private Key Path:" rsa_private_key_path
-                export tenancy-ocid=$tenancy_ocid
-                export user-ocid=$user_ocid
-                export fingerprint=$fingerprint
-                export region-identifier=$region_identifier
-                export rsa-private-key-path=$rsa_private_key_path
+                read -p "Enter your Region: " region
+                read -p "Enter Private Key Path: " private_key_path
+                export $tenancy_ocid
+                export $user_ocid
+                export $fingerprint
+                export $region
+                export $private_key_path
                 terraform destroy 
                 ;;
         *)

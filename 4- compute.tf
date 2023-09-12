@@ -1,7 +1,7 @@
-resource "oci_core_instance" "ubuntu_instance" {
+resource "oci_core_instance" "Wind_IS" {
     # Required
-    availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
-    compartment_id = "<compartment-ocid>"
+    availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
+    compartment_id = oci_identity_compartment.tf-compartment.compartment_id
     shape = "VM.Standard2.1"
     source_details {
         source_id = "<source-ocid>"
@@ -9,13 +9,13 @@ resource "oci_core_instance" "ubuntu_instance" {
     }
 
     # Optional
-    display_name = "<your-ubuntu-instance-name>"
+    display_name = "Wind_IS"
     create_vnic_details {
         assign_public_ip = true
-        subnet_id = "<subnet-ocid>"
+        subnet_id = oci_core_subnet.vcn-public-subnet.id
     }
     metadata = {
-        ssh_authorized_keys = file("<ssh-public-key-path>")
+        user_data = file("initial_script.sh")
     } 
     preserve_boot_volume = false
 }

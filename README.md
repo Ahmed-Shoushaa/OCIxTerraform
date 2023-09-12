@@ -70,12 +70,12 @@ We can run the terraform scripts with multiple methods choose one of them:
     ./automation.sh
     ```
 <p align="center">
-  <img width="600" height="450" src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/d75c34a0-11d7-42b4-8cd8-d65aa440e011">
+  <img width="500" height="370" src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/e2d00419-93cf-465d-be42-dd545d15615f">
 </p>
 
-2. Uncomment the <provider "oci"> section in provider.tf and add the required data values
+2.  Or Uncomment the <provider "oci"> section in provider.tf and add the required data values
 <p align="center">
-  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/a344c5ea-7d02-4a23-b28a-a5935b8a230d">
+  <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/assets/117172376/71dd5178-4cc3-4cfe-ab80-774955333bd9">
 </p>
 
 ## Access Instance 

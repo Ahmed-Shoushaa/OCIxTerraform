@@ -1,5 +1,4 @@
-# OCI-Terraform
-Simple infrastructure on OCI using Terraform
+# Simple compute instance Infrastructure on OCI using Terraform
 <p align="center">
   <img  src="https://github.com/Ahmed-Shoushaa/OCIxTerraform/blob/e51e46cca32c9d44660305d29ecb6c555569a255/Images/oci-architecture.jpg">
 </p>
@@ -62,7 +61,7 @@ For More details: https://docs.oracle.com/en-us/iaas/developer-tutorials/tutoria
 
 ## Run Terraform Scripts:
 
-We can run the terraform scripts with multiple methods choose one of them:
+We can run the terraform scripts with multiple methods depending on the oci api authentication methods choose one of the following:
 1. Run automation.sh which takes the required authentication data as Environmental variables and authenticate to oracle api with it then create or delete the infrastructure
     ```bash
     # cd to the script directory

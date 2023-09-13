@@ -1,5 +1,5 @@
 data "template_file" "user_data" {
-  template = file("initial_script.sh")
+  template = file("../initial_script.sh")
 }
 
 resource "oci_core_instance" "Wind_IS" {

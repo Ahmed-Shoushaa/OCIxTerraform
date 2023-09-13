@@ -39,6 +39,7 @@ case $desicion in
                 export TF_VAR_fingerprint=$fingerprint
                 export TF_VAR_region=$region
                 export TF_VAR_private_key_path=$private_key_path
+                cd terraform_scripts/
                 terraform init
                 terraform apply 
                 ;;
@@ -55,6 +56,7 @@ case $desicion in
                 export TF_VAR_fingerprint=$fingerprint
                 export TF_VAR_region=$region
                 export TF_VAR_private_key_path=$private_key_path
+                cd terraform_scripts/
                 terraform destroy 
                 ;;
         *)

@@ -3,7 +3,7 @@
 module "vcn" {
   source                  = "oracle-terraform-modules/vcn/oci"
   version                 = "3.5.2"
-  compartment_id          = oci_identity_compartment.tf-compartment.id
+  compartment_id          = oci_identity_compartment.wind_task_compartment.id
   create_internet_gateway = true
   region                  = var.region
   vcn_name                = "vcn"
@@ -13,7 +13,7 @@ module "vcn" {
 resource "oci_core_security_list" "public-security-list" {
 
   # Required
-  compartment_id = oci_identity_compartment.tf-compartment.compartment_id
+  compartment_id = oci_identity_compartment.wind_task_compartment.compartment_id
   vcn_id         = module.vcn.vcn_id
 
   # Optional
@@ -65,7 +65,7 @@ resource "oci_core_security_list" "public-security-list" {
 resource "oci_core_subnet" "vcn-public-subnet" {
 
   # Required
-  compartment_id = oci_identity_compartment.tf-compartment.compartment_id
+  compartment_id = oci_identity_compartment.wind_task_compartment.compartment_id
   vcn_id         = module.vcn.vcn_id
   cidr_block     = "10.0.0.0/24"
 

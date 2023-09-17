@@ -10,7 +10,7 @@
     ```bash
     # cd to the script directory
     chmod 700 terraform_install.sh
-    # For Debian/Ubuntu based images only
+    # For Debian/Ubuntu based OS only
     ./terraform_install.sh
     ```
     

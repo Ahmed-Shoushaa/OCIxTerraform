@@ -20,5 +20,4 @@ echo "     ↓      ↓      ↓"
 # Show the key and Copy the public key.
 cat ~/.oci/RSA_public.pem
 
-# ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -c 
-# $ ssh-keygen Generating public/private rsa key pair.
+#https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/managingkeypairs.htm
